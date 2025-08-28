@@ -1,0 +1,8 @@
+//Prettier will ignore these files
+
+*.env
+.env
+.env.*
+
+/node_modules
+./dist
