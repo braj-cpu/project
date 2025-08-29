@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { DB_NAME } from "./constants.js";
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config();// It reads your .env file (a text file with key=value pairs).
 
 
 import express from "express";
@@ -24,7 +24,7 @@ const app=express();
     }
     
     catch (error) {
-        console.error("Error" , error);
+        console.error("DB connection FAILED" , error);
     }
 })();
 
