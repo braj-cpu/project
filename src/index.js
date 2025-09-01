@@ -1,10 +1,25 @@
-import mongoose from "mongoose";
-import { DB_NAME } from "./constants.js";
 import dotenv from "dotenv";
+import connectDB from "../db/index.js";
 
 dotenv.config();// It reads your .env file (a text file with key=value pairs).
 
+connectDB()
+.then(()=>{
+    app.listen(process.env.PORT || 8000, ()=>{
+        console.log(`Server is running`)
+    })
+})
+.catch((err)=>{
+    console.log("MONGODB connection failed !!!", err)
+})
 
+
+
+
+
+
+
+/*
 import express from "express";
 const app=express();
 
@@ -28,5 +43,5 @@ const app=express();
     }
 })();
 
-
+*/
 
