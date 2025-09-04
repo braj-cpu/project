@@ -59,6 +59,8 @@ userSchema.methods.isPasswordCorrect= async function(password){
     return await bcrypt.compare(password, this.password)//returns true/false
 }
 
+
+// Header: The header contains the type of token and the algorithm used to produce it. Payload: The payload contains the user details. Signature: The signature is for authenticating the valid user.
 userSchema.methods.generateAccessToken= function(){
     return jwt.sign(
         {
